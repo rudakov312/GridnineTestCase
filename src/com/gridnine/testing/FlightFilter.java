@@ -7,6 +7,10 @@ import java.util.List;
 
 public class FlightFilter {
 
+    /**
+     * To cover the task with unit tests, I had to change the attached file. If you need to check the lists for identity, you need to specify an immutable date, not the current one.
+     */
+
     public static List<Flight> sortingDepartureBeforeNow(List<Flight> OriginalList) {
         List<Flight> filteredFlights = new LinkedList<>(OriginalList);
         for (int i = 0; i < filteredFlights.size(); i++) {
@@ -42,7 +46,6 @@ public class FlightFilter {
             if (segList.size() != 1) {
                 for (int j = 0; j < segList.size() - 1; j++) {
                     if (Math.abs(segList.get(j).getArrivalDate().getHour() - segList.get(j + 1).getDepartureDate().getHour()) > 2) {
-                        System.out.println(filteredFlights.get(i));
                         filteredFlights.remove(filteredFlights.get(i));
                         segList.clear();
                         i--;

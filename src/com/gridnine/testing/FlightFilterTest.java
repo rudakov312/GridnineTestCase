@@ -8,6 +8,10 @@ import java.util.List;
 
 public class FlightFilterTest {
 
+    /**
+     * To cover the task with unit tests, I had to change the attached file. If you need to check the lists for identity, you need to specify an immutable date, not the current one.
+     */
+
     @Test
     public void sortingDepartureBeforeNow() {
         List<Flight> ActualList = new LinkedList<>(FlightBuilder.createFlights());
